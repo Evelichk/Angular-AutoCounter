@@ -1,0 +1,43 @@
+  <button mat-button [matMenuTriggerFor]="signInMenu" class="wrap-link" (click)="$event.stopPropagation()">Sign In</button>
+  <mat-menu #signInMenu = matMenu class="menu" [formGroup]="loginForm" (click)="$event.stopPropagation()">
+
+    <mat-form-field class="mat-form"(click)="$event.stopPropagation()">
+      <input matInput required type="text" placeholder="Login" (click)="$event.stopPropagation()">
+    </mat-form-field>
+
+    <mat-form-field class="mat-form"(click)="$event.stopPropagation()">
+      <input matInput required type="password" placeholder="Password" [formControlName]="'loginValidator'" (click)="$event.stopPropagation()">
+    </mat-form-field>
+
+    <div class="mat-form"(click)="$event.stopPropagation()">
+      <button type="submit" mat-raised-button >Log In</button>
+    </div>
+
+
+  </mat-menu>
+
+  <button mat-button class="wrap-link" [matMenuTriggerFor]="signUpMenu">Sign Up</button>
+  <mat-menu #signUpMenu = matMenu (click)="$event.stopPropagation()">
+
+    <mat-form-field class="mat-form">
+      <input matInput required type="text" placeholder="Enter Login" (click)="$event.stopPropagation()">
+    </mat-form-field>
+
+    <<mat-form-field class="mat-form">
+    <input matInput required type="text" placeholder="Enter E-mail" (click)="$event.stopPropagation()">
+  </mat-form-field>
+
+    <<mat-form-field class="mat-form">
+    <input matInput required type="password" placeholder="Enter Password" (click)="$event.stopPropagation()">
+  </mat-form-field>
+
+    <mat-form-field class="mat-form">
+      <input matInput required type="password" placeholder="Confirm Password" (click)="$event.stopPropagation()">
+    </mat-form-field>
+
+    <div class="mat-form">
+      <button type="submit" mat-raised-button>Register</button>
+    </div>
+
+  </mat-menu>
+

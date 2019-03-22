@@ -37,38 +37,27 @@
   z-index: 2;
   margin-top: 0;
 }
-.sign-link{
-  text-align:center;
-  color:#fff;
-  font-size: 20px;
-  position: relative;
-  z-index: 2;
-}
+
 .logo{
   height: 50px;
   width: 50px;
   z-index: 2;
   margin-left: 5px;
 }
-.wrap-link{
-  margin-top: 10px;
+.wrap-links{
+  margin-top: 5px;
+  margin-right: 15px;
   display: flex;
   justify-content: flex-end;
-
-
-}
-.wrap-link li{
-  margin-right: 15px;
+  z-index: 4;
 }
 .wrap-ico{
   margin-left: 15px;
   position: absolute;
   z-index: 4;
 }
-.wrap-link li{
-  list-style: none;
-  text-decoration: underline;
-  cursor: pointer;
-}
+
+
+
 
 

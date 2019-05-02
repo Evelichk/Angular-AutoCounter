@@ -56,7 +56,21 @@
   position: absolute;
   z-index: 4;
 }
+.inner {
+  animation: 2s linear infinite rot;
+  -webkit-animation: 2s linear infinite rot;
+  transform-origin: 22px 26px;
 
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 
 

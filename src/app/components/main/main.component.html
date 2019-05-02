@@ -1,0 +1,25 @@
+<div class="fullscreen-bg">
+
+  <div class="overlay">
+
+    <div class="wrap-ico">
+      <svg class="logo">
+        <use xlink:href="../../assets/images/main.svg#main" ></use>
+        <use class="inner" xlink:href="../../assets/images/main.svg#inner" ></use>
+      </svg >
+    </div>
+
+    <div class="wrap-links">
+      <app-start-page-menu (click) = "$event.stopPropagation()"></app-start-page-menu>
+    </div>
+
+    <h1>Auto accountant</h1>
+    <h2>Enjoy your auto with us!</h2>
+
+  </div>
+
+  <video loop  autoplay="autoplay" controls="controls" preload="auto" class="fullscreen-bg-video">
+    <source src="../../../assets/video/main-video.webm" type="video/webm">
+  </video>
+
+</div>

@@ -1,0 +1,42 @@
+  <button mat-button [matMenuTriggerFor]="signInMenu" class="wrap-link">Sign In</button>
+  <mat-menu #signInMenu = matMenu class="menu" [formGroup]="loginForm" (click) = "$event.stopPropagation()">
+
+    <mat-form-field class="mat-form" (click) = "$event.stopPropagation()">
+      <input matInput required type="text" placeholder="Login" (input)="login=$event.target.value" (click)="$event.stopPropagation()">
+    </mat-form-field>
+
+    <mat-form-field class="mat-form" (click) = "$event.stopPropagation()">
+      <input matInput required type="password" placeholder="Password" (input)="pass=$event.target.value" [formControlName]="'loginValidator'" (click)="$event.stopPropagation()">
+    </mat-form-field>
+
+    <div class="mat-form" (click) = "$event.stopPropagation()">
+      <button type="submit" mat-raised-button (click)="validateLoginForm()">Log In</button>
+    </div>
+
+
+  </mat-menu>
+  <button mat-button class="wrap-link" [matMenuTriggerFor]="signUpMenu">Sign Up</button>
+  <mat-menu #signUpMenu = matMenu class="menu" [formGroup]="regForm" (click) = "$event.stopPropagation()">
+
+    <mat-form-field class="mat-form" (click) = "$event.stopPropagation()">
+      <input matInput type="text" placeholder="Enter Login" (input)="login=$event.target.value" (click)="$event.stopPropagation()" [formControlName]="'login'">
+    </mat-form-field>
+
+    <mat-form-field class="mat-form" (click) = "$event.stopPropagation()">
+    <input matInput type="text" placeholder="Enter E-mail" (input)="email=$event.target.value" (click)="$event.stopPropagation()" [formControlName]="'email'">
+  </mat-form-field>
+
+    <mat-form-field class="mat-form" (click) = "$event.stopPropagation()">
+    <input matInput type="password" placeholder="Enter Password"  (input)="pass=$event.target.value" (click)="$event.stopPropagation()" [formControlName]="'pass'">
+  </mat-form-field>
+
+    <mat-form-field class="mat-form" (click) = "$event.stopPropagation()">
+      <input matInput type="password" placeholder="Confirm Password"  (input)="confPass=$event.target.value" (click)="$event.stopPropagation()" [formControlName]="'confPass'">
+    </mat-form-field>
+
+    <div class="mat-form" (click) = "$event.stopPropagation()">
+      <button type="submit" mat-raised-button (click)="validateRegForm()">Register</button>
+    </div>
+
+  </mat-menu>
+

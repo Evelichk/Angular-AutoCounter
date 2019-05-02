@@ -1,0 +1,48 @@
+<header>
+  <svg class="logo">
+    <use xlink:href="../../assets/images/main.svg#main" ></use>
+    <use class="inner" xlink:href="../../assets/images/main.svg#inner" ></use>
+  </svg >
+  <div class="name">Auto Accountant</div>
+  <div class="login-wrapper">
+    <div class="login">{{user}}</div>
+  </div>
+</header>
+<button mat-button class="back-button" (click)="navBack()"><img src="../../../assets/images/left-arrow.png"></button>
+  <h2>Add auto</h2>
+<div class="container">
+  <div class="form-container">
+    <mat-form-field>
+      <input matInput placeholder="Make" (input)="this.name=$event.target.value">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Model" (input)="this.model=$event.target.value">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Year" (input)="this.year=$event.target.value">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Miles" (input)="this.miles=$event.target.value">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Engine" (input)="this.engine=$event.target.value">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Transmission" (input)="this.transmission=$event.target.value">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Color" (input)="this.color=$event.target.value">
+    </mat-form-field>
+  </div>
+
+</div>
+
+<button mat-raised-button class="button" (click)="saveAuto()">Save</button>
+<div *ngIf="saved" class="inform">Your car was succesfully saved to DB</div>
+

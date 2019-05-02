@@ -1,0 +1,19 @@
+<mat-tab-group>
+  <mat-tab label="Overview">
+    <h3 *ngIf="car">{{car.name}} - {{car.model}}, {{car.year}}</h3>
+    <div class="inner-content">
+    </div>
+  </mat-tab>
+  <mat-tab label="Tasks">
+    <ul class="task-list">
+      <li *ngFor="let task of tasks" class="task">{{task.name}} - {{task.cost}}
+        <span><button class="confirm-button"></button><button class="del-button"></button></span></li>
+    </ul>
+    <button mat-raised-button class="task-button" (click)="openAddDialog()">Add task</button>
+  </mat-tab>
+  <mat-tab label="History">
+    <ul>
+      <li>Task549</li>
+    </ul>
+  </mat-tab>
+</mat-tab-group>

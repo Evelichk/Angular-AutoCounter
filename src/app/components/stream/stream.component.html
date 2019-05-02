@@ -1,0 +1,22 @@
+<header>
+  <svg class="logo">
+    <use xlink:href="../../assets/images/main.svg#main" ></use>
+    <use class="inner" xlink:href="../../assets/images/main.svg#inner" ></use>
+  </svg >
+  <div class="name">Auto Accountant</div>
+  <div class="login-wrapper">
+    <div class="login">{{user}}</div>
+  </div>
+</header>
+<mat-sidenav-container class="bar-wrapper" routerLink="/stream/{{user}}">
+  <mat-sidenav mode="side" opened class="sidebar">
+    <h2>Contents</h2>
+    <ul class="main-list">
+      <li *ngFor="let car of auto" (click)="onCarSelect(car)"><span>{{car.name}} - {{car.model}}, {{car.year}}</span></li>
+    </ul>
+    <button mat-mini-fab class="add-button" (click)="addAuto()">+</button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-content [car] = selectedCar></app-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

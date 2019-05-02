@@ -1,0 +1,27 @@
+.task-list{
+  list-style: none;
+}
+.task{
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+.confirm-button{
+  background: url("../../../assets/images/ok2.png");
+  width: 20px;
+  height: 20px;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.del-button{
+  background: url("../../../assets/images/del2.png");
+  width: 20px;
+  height: 20px;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.task-button{
+  margin-left: 35px;
+
+}
